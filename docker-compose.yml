@@ -7,7 +7,7 @@ services:
     environment:
       redisServer: redis
   webapi:
-    build: estadisticasapi/.
+    build: estadisiticasapi/.
     ports:
       - "9090:80"
     environment:
