@@ -1,0 +1,19 @@
+--Bajar los fuentes del repositorio
+git clone https://github.com/maugust17/geolocalizacionip.git
+cd geolocalizacionip
+
+--Para generar los contenedores a partir de los fuentes
+docker compose up -d
+
+--Para ejecutar la app es necesario entrar al contenedor
+docker exec -it geolocalizacionip-webapi-1 /bin/sh
+
+--luego se pueden usar los scripts
+./consulta_ip_espania.sh 
+./consulta_ip_brasil.sh 
+./consulta_ip_argentina.sh 
+
+--tambien se puede ejecutar manualmente
+dotnet geolocalizacionip.dll <IPv4 o IPv6>
+dotnet geolocalizacionip.dll 200.200.200.200
+
