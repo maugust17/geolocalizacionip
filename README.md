@@ -45,3 +45,11 @@ A medida que se use la aplicacion par consultar IPs, se van actualizando las est
 
 ![imagen](https://user-images.githubusercontent.com/26204784/188350659-9828d0c1-6881-48a4-a70a-b456d533a549.png)
 
+# Kubernetes
+
+En los fuentes, dentro de la carpeta k8s se incluye un archivo YAML para desplegar un servicio en Kubernetes. En la image se indica el campo "replicas" que permite escalar la aplicacion para poder recibir más peticiones por minuto.
+
+Para poder desplegarlo, es neesario editar el archivo YAML e indicar el nombre la imagen a utilizar.
+
+![imagen](https://user-images.githubusercontent.com/26204784/188352090-35db0737-3c5b-4823-8e9e-d1a17d31790b.png)
+
