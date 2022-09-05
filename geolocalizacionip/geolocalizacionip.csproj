@@ -13,4 +13,16 @@
     <PackageReference Include="StackExchange.Redis" Version="2.6.48" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="consulta_ip_argentina.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="consulta_ip_brasil.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="consulta_ip_espania.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
