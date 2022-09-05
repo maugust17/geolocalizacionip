@@ -24,7 +24,7 @@ namespace geolocalizacionip.Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"IP: {IP}, fecha actual:{HoraActual.ToString("G", CultureInfo.GetCultureInfo("es-ES"))}");
+            sb.AppendLine($"IP: {IP}, fecha actual:{HoraActual.ToString("YYYY/MM/dd HH:mm:ss")}");
             sb.AppendLine($"País: {Pais.Nombre} ({Pais.NombreIngles.ToLower()})");
             sb.AppendLine($"Código ISO3166-1 alpha2:{Pais.CodigoISO}");
             sb.AppendLine($"Código ISO3166-1 alpha3:{Pais.CodigoISO3}");

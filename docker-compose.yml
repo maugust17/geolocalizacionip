@@ -2,12 +2,8 @@ version: "3.9"
 services:
   redis:  
     image: "redis:7.0.4"
-  geolocalizacion:
-    build: geolocalizacionip/.
-    environment:
-      redisServer: redis
   webapi:
-    build: estadisiticasapi/.
+    build: .
     ports:
       - "9090:80"
     environment:
