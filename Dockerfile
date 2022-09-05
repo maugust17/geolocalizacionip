@@ -14,8 +14,10 @@ WORKDIR /src2
 COPY ["geolocalizacionip/geolocalizacionip.csproj", "./"]
 RUN dotnet restore "geolocalizacionip.csproj"
 COPY ["geolocalizacionip/.", "."]
-RUN ["chmod", "775", "consulta_ip_*"]
 WORKDIR "/src2/."
+RUN ["chmod","775","consulta_ip_argentina.sh"]
+RUN ["chmod","775","consulta_ip_brasil.sh"]
+RUN ["chmod","775","consulta_ip_espania.sh"]
 RUN dotnet build "geolocalizacionip.csproj" -c Release -o /app/build
 
 FROM build AS publish
