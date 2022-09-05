@@ -11,7 +11,7 @@ namespace geolocalizacionip
     {
         public static double ConvertiraDouble(string valor)
         {
-            return Convert.ToDouble(valor.Replace(".", ","));
+            return Convert.ToDouble(valor/*.Replace(".", ",")*/);
 
         }
         public static string ToStringNuevo(this Coordinate coordinate)

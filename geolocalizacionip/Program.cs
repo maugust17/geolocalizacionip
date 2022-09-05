@@ -27,7 +27,7 @@ namespace geolocalizacionip
             
             string ip = args[0];
             //ip = "104.41.63.254";//Brasil
-            //ip="83.44.196.93";//España
+            //ip = "83.44.196.93";//España
             //ip = "2800:810:508:8a19:1050:d989:3b38:fd6c";//Argentina
 
             //Guardo la Hora de la consulta.
