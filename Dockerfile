@@ -25,9 +25,8 @@ RUN dotnet publish "geolocalizacionip.csproj" -c Release -o /app/publish
 
 
 FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
 WORKDIR /api
 COPY --from=publish /api/publish .
-ENTRYPOINT ["dotnet", "estadisticasapi.dll"]
 WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "/api/estadisticasapi.dll"]
