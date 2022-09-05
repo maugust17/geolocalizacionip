@@ -17,7 +17,7 @@ docker compose up -d
 
 docker exec -it geolocalizacionip-webapi-1 /bin/sh
 
---luego se pueden usar los scripts
+--Luego se pueden usar los scripts para pruebas
 
 ./consulta_ip_espania.sh 
 
@@ -25,13 +25,13 @@ docker exec -it geolocalizacionip-webapi-1 /bin/sh
 
 ./consulta_ip_argentina.sh 
 
---tambien se puede ejecutar manualmente
+--Tambien se puede ejecutar manualmente
 
 dotnet geolocalizacionip.dll <IPv4 o IPv6>
 
 dotnet geolocalizacionip.dll 200.200.200.200
 
-Asegurarse estar dentro de la carpeta /app
+Asegurarse estar dentro de la carpeta /app dentro del contenedor para poder ejecutar la app
 
 # estadisticaapi
 
