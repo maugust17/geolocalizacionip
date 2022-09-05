@@ -1,23 +1,25 @@
 # geolocalizacionip
-Repositorio con ejercicio de geolocalicación IP.
+Repositorio con ejercicio de geolocalicación IP. Consta de 2 proyectos, una aplicación para cargar los datos enviando la IP por parametro y un webservice para consultar las estadisticas. Para simplicidad incluí las 2 aplicaciones dentro del mismo contenedor, abajo se describe como acceder al webservice.
 
-El proyecto esta escrito en .Net Core C# 6.0, se persisten los datosen Redis.
+El proyecto esta escrito en .Net Core C# 6.0, se persisten los datos en Redis.
 
---Bajar los fuentes del repositorio
+-- Bajar los fuentes del repositorio
 
 git clone https://github.com/maugust17/geolocalizacionip.git
 
+-- Acceder a la carpeta con los fuentes
+
 cd geolocalizacionip
 
---Para generar los contenedores a partir de los fuentes
+-- Para generar los contenedores a partir de los fuentes
 
 docker compose up -d
 
---Para ejecutar la app es necesario entrar al contenedor
+-- Para ejecutar la app es necesario entrar al contenedor
 
 docker exec -it geolocalizacionip-webapi-1 /bin/sh
 
---Luego se pueden usar los scripts para pruebas
+-- Luego se pueden usar los scripts para pruebas
 
 ./consulta_ip_espania.sh 
 
@@ -25,7 +27,7 @@ docker exec -it geolocalizacionip-webapi-1 /bin/sh
 
 ./consulta_ip_argentina.sh 
 
---Tambien se puede ejecutar manualmente
+-- Tambien se puede ejecutar manualmente
 
 dotnet geolocalizacionip.dll <IPv4 o IPv6>
 
