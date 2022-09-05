@@ -6,7 +6,7 @@ using geolocalizacionip.Entidades;
 using System.Linq;
 using Geolocation;
 using ServiceStack.Redis;
-
+using System.Net;
 
 namespace geolocalizacionip
 {
@@ -26,11 +26,17 @@ namespace geolocalizacionip
         {
             
             string ip = args[0];
+
+            if (!ValidarIP(ip))
+            {
+                Console.WriteLine("Error en el formato de la IP!!!");
+                return;
+            }
             //ip = "104.41.63.254";//Brasil
             //ip = "83.44.196.93";//España
             //ip = "2800:810:508:8a19:1050:d989:3b38:fd6c";//Argentina
 
-            //Guardo la Hora de la consulta.
+                //Guardo la Hora de la consulta.
             DateTime horaActual = DateTime.Now;
 
 
@@ -87,6 +93,12 @@ namespace geolocalizacionip
                 await estadisticasDB.StringSetAsync("promedio", (double)(promedio + infoIP.Localizacion.Distancia)/lecturas);
             }
             Console.WriteLine(infoIP.ToString());
+        }
+
+        private static bool ValidarIP(string ip_validar)
+        {
+            IPAddress ip;
+            return IPAddress.TryParse(ip_validar, out ip);
         }
 
         /// <summary>
